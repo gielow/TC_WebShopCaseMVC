@@ -34,7 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -119,6 +121,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\ValuesControllerTest.cs" />
+    <Compile Include="SerializationTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
@@ -127,6 +130,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TC_WebShopCaseMVC.Entities\TC_WebShopCaseMVC.Entities.csproj">
+      <Project>{6789c1ef-c376-44ff-8ff8-95248ef6c14e}</Project>
+      <Name>TC_WebShopCaseMVC.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TC_WebShopCaseMVC\TC_WebShopCaseMVC.csproj">
       <Project>{5F321D11-3E91-4119-88A7-A863E0883A86}</Project>
       <Name>TC_WebShopCaseMVC</Name>
